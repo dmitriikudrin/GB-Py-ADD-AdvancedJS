@@ -6,7 +6,7 @@ const app = new Vue({
     data: {
         userSearch: '',
         showCart: false,
-        catalogUrl: '/1catalogData.json',
+        catalogUrl: '/catalogData.json',
         cartUrl: '/getBasket.json',
         cartItems: [],
         filtered: [],
@@ -22,8 +22,6 @@ const app = new Vue({
                 .then(result => result.json()).
                 catch(error => {
                     this.error_urls.push(url);
-                    // console.log(url);
-                    // console.log(this.error_urls)
                     this.error = true;
                 })
 
