@@ -5,7 +5,7 @@ Vue.component('cart', {
       return {
           cartUrl: '/getBasket.json',
           cartItems: [],
-          imgCart: 'https://placehold.it/50x100',
+          imgCart: 'https://via.placeholder.com/60x45',
           showCart: false
       }
     },
@@ -78,7 +78,7 @@ Vue.component('cart-item', {
     template: `
     <div class="cart-item">
                     <div class="product-bio">
-                        <img :src="img" alt="Some img">
+                        <img :src="cartItem.imgCart" alt="Some img">
                         <div class="product-desc">
                             <div class="product-title">{{ cartItem.product_name }}</div>
                             <div class="product-quantity">Quantity: {{ cartItem.quantity }}</div>
