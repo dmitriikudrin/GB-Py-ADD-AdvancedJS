@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text = "Создать форму обратной связи с полями: Имя, Телефон, E-mail, текст, кнопка Отправить.\n" +
+        "При нажатии на кнопку Отправить произвести валидацию полей следующим образом:\n" +
+        "a. Имя содержит только буквы.\n" +
+        "b. Телефон имеет вид +7(000)000-0000.\n" +
+        "c. E-mail имеет вид mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru.\n" +
+        "d. Текст произвольный.\n" +
+        "e. Если одно из полей не прошло валидацию, необходимо выделить это поле красной рамкой\n" +
+        "и сообщить пользователю об ошибке."
+    // console.log(text.replace(/\'/g, '"'))
+
+    let name = 'Василий Пупкин'
+    let phone = '+7(000)000-0000'
+    let email = 'my-mail@mail.ru'
+
+    let nameTemplate = /^[а-яА-ЯёЁ\s]*$/
+    let phoneTemplate = /^\+7\(\d{3}\)\d{3}\-\d{4}$/
+    let emailTemplate = /^[A-Za-z\d]+[\w-\.]*@+[A-Za-z\d]+[A-Za-z-\d]*(\.+[A-Za-z-\d]*)*$/
+
+    console.log(nameTemplate.test(name))
+    console.log(phoneTemplate.test(phone))
+    console.log(emailTemplate.test(email))
+
+</script>
+</body>
+</html>
